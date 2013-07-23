@@ -74,8 +74,8 @@ class Sales_item {
 		// 解决办法：添加clone函数
 		Sales_item(const Item_base& );
 		
+		// 复制控制成员
 		Sales_item(const Sales_item& i) : p(i.p), use(i.use) { ++*use; }
-
 		~Sales_item() { decr_use(); }
 		Sales_item& operator=(const Sales_item&);
 
